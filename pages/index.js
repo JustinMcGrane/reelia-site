@@ -1,43 +1,63 @@
 
-import Head from 'next/head'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Reelia – AI Video Creation for Brands</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-white shadow p-6">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-indigo-600">Reelia</h1>
+            <nav>
+                <a href="#features" class="text-gray-600 mx-4">Features</a>
+                <a href="#video" class="text-gray-600 mx-4">Sample Video</a>
+                <a href="#request" class="text-gray-600 mx-4">Request Video</a>
+            </nav>
+        </div>
+    </header>
 
-export default function Home() {
-  return (
-    <div>
-      <Head>
-        <title>Reelia – AI Video Ads</title>
-      </Head>
-      <main className="text-center py-16 px-4">
-        <h1 className="text-5xl font-bold text-indigo-600">Reelia</h1>
-        <p className="mt-4 text-lg">AI-generated video ads, delivered in 48 hours.</p>
+    <section class="text-center py-20 bg-indigo-50">
+        <h2 class="text-5xl font-extrabold mb-4">AI-Powered Videos for Modern Brands</h2>
+        <p class="text-lg max-w-xl mx-auto mb-6">Reelia creates studio-quality, AI-generated videos on demand—perfect for social media, ads, and branded content.</p>
+    </section>
 
-        <section className="mt-12">
-          <h2 className="text-2xl font-semibold mb-2">How it Works</h2>
-          <ol className="list-decimal list-inside space-y-1">
-            <li>Submit your content idea</li>
-            <li>We generate the video using AI</li>
-            <li>You review and publish</li>
-          </ol>
-        </section>
+    <section id="features" class="max-w-6xl mx-auto py-16">
+        <h3 class="text-3xl font-bold mb-8 text-center">Why Reelia?</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div><h4 class="text-xl font-semibold mb-2">Realistic AI Videos</h4><p>We use top-tier tools like Runway Gen-3 and Veo to create lifelike video content.</p></div>
+            <div><h4 class="text-xl font-semibold mb-2">Fast Turnaround</h4><p>Your videos are ready in 48 hours or less—no editing required.</p></div>
+            <div><h4 class="text-xl font-semibold mb-2">Custom to Your Brand</h4><p>Tell us your vision. We do the rest. No templates, just storytelling.</p></div>
+        </div>
+    </section>
 
-        <section className="mt-12">
-          <h2 className="text-2xl font-semibold mb-2">Pricing</h2>
-          <ul className="space-y-1">
-            <li>Starter – 2 videos/mo – $99</li>
-            <li>Pro – 8 videos/mo – $299</li>
-            <li>Agency – 20+ videos/mo – Custom</li>
-          </ul>
-        </section>
+    <section id="video" class="bg-gray-100 py-16">
+        <div class="max-w-3xl mx-auto text-center">
+            <h3 class="text-3xl font-bold mb-4">Sample AI Video</h3>
+            <video class="w-full rounded shadow" controls>
+                <source src="sample-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
 
-        <section className="mt-12 max-w-xl mx-auto">
-          <h2 className="text-2xl font-semibold mb-2">Submit a Brief</h2>
-          <form className="flex flex-col space-y-4 text-left">
-            <input className="border p-2" type="text" placeholder="Video Type" />
-            <textarea className="border p-2" placeholder="Describe your idea..." />
-            <button className="bg-indigo-600 text-white py-2 rounded">Submit</button>
-          </form>
-        </section>
-      </main>
-    </div>
-  )
-}
+    <section id="request" class="py-20 bg-white">
+        <div class="max-w-2xl mx-auto">
+            <h3 class="text-3xl font-bold text-center mb-6">Request Your Free AI Video</h3>
+            <form action="https://formspree.io/f/xyyqqkaj" method="POST" class="bg-gray-50 p-6 rounded-lg shadow space-y-4">
+                <input type="text" name="Name" required placeholder="Your Name" class="w-full p-3 border rounded" />
+                <input type="email" name="Email" required placeholder="Your Email" class="w-full p-3 border rounded" />
+                <input type="text" name="Brand Name" placeholder="Your Brand Name" class="w-full p-3 border rounded" />
+                <textarea name="Video Request" required placeholder="Describe the video you want us to make..." rows="5" class="w-full p-3 border rounded"></textarea>
+                <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white text-center py-6">
+        <p>&copy; 2025 Reelia.ai • Contact: team@reelia.ai</p>
+    </footer>
+</body>
+</html>
